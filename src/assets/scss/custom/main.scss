@@ -1,0 +1,636 @@
+/*
+Main css for all website
+*/
+
+:root,
+[data-theme="default"] {
+    --dark: black;
+    --grey-dark: #606060;
+    --grey: #9c9c9c;
+    --grey-light: #9c9c9c;
+    --grey-white: #f9f9f9;
+    --white: white;
+    --light-trans: rgba(255, 255, 255, 0.7);
+    --dark-trans: rgba(0, 0, 0, 0.2);
+    --dark-trans-plus: rgba(0, 0, 0, 0.1);
+    --whiten: rgba(255, 255, 255, 0.9);
+    --snackbar-border: transparent;
+    --green-light: #e9fcf6;
+    --dodger-blue: #065fd4;
+    --cm-grey: #9c9c9c;
+    --cm-green: #96a702;
+    --cm-blue: #3f2e75
+}
+
+// TAG & BOOTSTRAP
+$hbar-height: 6rem;
+$vbar-width: 6rem;
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    //background: var(--d-grey);
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    font-size: 1.4rem;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+#app {
+    color: var(--dark);
+    height: 100%;
+}
+
+header {
+    background: var(--grey-white) !important;
+}
+
+select,
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--white) !important;
+    color: var(--dark) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: var(--white) auto 1px;
+}
+
+select:invalid {
+    color: grey !important;
+}
+
+select:after {
+    content: "\f078";
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #0ebeff;
+    right: 11px;
+    top: 6px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;
+    border-left: 1px solid #0ebeff;
+    position: absolute;
+    pointer-events: none;
+}
+
+option[disabled="disabled"] {
+    display: none;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid var(--grey-dark);
+}
+
+p {
+    overflow-wrap: break-word; // ?
+    margin-bottom: 0;
+    word-break: break-word;
+}
+
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.cm-dark {
+    color: var(--dark) !important;
+}
+
+.cm-bg-dark {
+    background-color: var(--dark) !important;
+}
+
+.cm-white {
+    color: var(--white) !important;
+}
+
+.cm-grey-white {
+    color: var(--grey-white) !important;
+}
+
+.cm-grey-light {
+    color: var(--grey-light) !important;
+}
+
+.cm-grey {
+    color: var(--cm-grey) !important;
+}
+
+.cm-grey-dark {
+    color: var(--grey-dark) !important;
+}
+
+.cm-green-light {
+    color: var(--green-light) !important;
+}
+
+.cm-dodger-blue {
+    color: var(--dodger-blue) !important;
+}
+
+.cm-green {
+    color: var(--cm-green) !important;
+}
+
+.cm-bg-green {
+    background: var(--cm-green) !important;
+}
+
+.cm-bg-grey-dark {
+    background: var(--grey-dark) !important;
+}
+
+.cm-bg-grey {
+    background-color: var(--cm-grey) !important;
+}
+
+.cm-bg-blue {
+    background-color: var(--cm-blue) !important;
+}
+
+.btn {
+    font-size: 1.4rem;
+}
+
+.cm-hbar-shadow {
+    -moz-box-shadow: 0 1px 2px var(--dark-trans);
+    -webkit-box-shadow: 0 1px 2px var(--dark-trans);
+    box-shadow: 0 1px 2px var(--dark-trans);
+}
+
+.cm-shadow {
+    -moz-box-shadow: 2px 2px 2px var(--dark-trans);
+    -webkit-box-shadow: 2px 2px 2px var(--dark-trans);
+    box-shadow: 2px 2px 2px var(--dark-trans);
+}
+
+.cm-darken {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cm-darken-plus {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cm-whiten {
+    background-color: var(--whiten);
+}
+
+.cm-page-loader {
+    background-color: var(--light-trans);
+    top: 0;
+    z-index: 25;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.cm-loader {
+    margin: 0 auto;
+    border-radius: 100%;
+    border: 3px solid var(--white);
+    border-top: 3px solid var(--dark-trans);
+    width: 25px;
+    height: 25px;
+    animation: vue-simple-spinner-spin 0.5s linear infinite;
+}
+
+.cm-loader-white {
+    border-color: var(--dark-trans) !important;
+    border-top-color: var(--white) !important;
+}
+
+.cm-font-size-1 {
+    font-size: 7.2rem !important;
+}
+
+.cm-font-size-2 {
+    font-size: 3.6rem !important;
+}
+
+.cm-font-size-3 {
+    font-size: 2.4rem !important;
+}
+
+.cm-font-size-4 {
+    font-size: 1.8rem !important;
+}
+
+.cm-font-size-5 {
+    font-size: 1.4rem !important;
+}
+
+.cm-font-size-6 {
+    font-size: 1.2rem !important;
+}
+
+.cm-font-size-7 {
+    font-size: 1rem !important;
+}
+
+.cm-font-size-8 {
+    font-size: 0.8rem !important;
+}
+
+.cm-bold {
+    font-weight: 700;
+}
+
+.cm-semibold {
+    font-weight: 600;
+}
+
+.cm-nobold {
+    font-weight: 400;
+}
+
+.text-shadow-black {
+    text-shadow: 1px 1px 1px black;
+}
+
+.text-underline {
+    text-decoration: underline !important;
+}
+
+// LINE TOOLS
+.text-justify {
+    text-align: justify;
+}
+
+.bg-full {
+    background-size: cover;
+}
+
+.line-break {
+    white-space: pre-line;
+}
+
+.line-clamp-1 {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden;
+}
+
+.line-clamp-10 {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    overflow: hidden;
+}
+
+.line-height-sm {
+    line-height: 1.2 !important;
+}
+
+.line-height-xs {
+    line-height: 1 !important;
+}
+
+.p-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.no-decoration {
+    text-decoration: none !important;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.pre-line {
+    white-space: pre-line;
+}
+
+.linkified {
+    text-decoration: underline !important;
+}
+
+.h-hbar {
+    height: $hbar-height !important;
+}
+
+.h-logo {
+    height: 2rem !important;
+}
+
+.w-1rem {
+    width: 1rem !important;
+}
+
+.w-2rem {
+    width: 2rem !important;
+}
+
+.w-3rem {
+    width: 3rem !important;
+}
+
+.w-4rem {
+    width: 4rem !important;
+}
+
+.w-5rem {
+    width: 5rem !important;
+}
+
+.w-10rem {
+    width: 10rem !important;
+}
+
+.h-1rem {
+    height: 1rem !important;
+}
+
+.h-2rem {
+    height: 2rem !important;
+}
+
+.h-3rem {
+    height: 3rem !important;
+}
+
+.h-4rem {
+    height: 4rem !important;
+}
+
+.h-5rem {
+    height: 5rem !important;
+}
+
+.pl-2-5 {
+    padding-left: 0.75rem !important;
+}
+
+.my-4-5 {
+    margin-bottom: 2rem !important;
+    margin-top: 2rem !important;
+}
+
+.py-4-5 {
+    padding-bottom: 2rem !important;
+    padding-top: 2rem !important;
+}
+
+.pt-4-5 {
+    padding-top: 2rem !important;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.absolute-center-x {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.fixed-center-x {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.center-vertically-child {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.bottom-vertically-child {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: column;
+}
+
+.top-vertically-child {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+}
+
+.parent-flex-column {
+    flex-direction: column;
+    align-items: stretch;
+    display: flex;
+}
+
+.child-flex-height-auto {
+    flex: 1;
+}
+
+.max-content-width {
+    width: max-content;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -o-max-content;
+    width: -ms-max-content;
+}
+
+.max-content-height {
+    height: max-content;
+    height: -moz-max-content;
+    /* Firefox */
+    height: -webkit-max-content;
+}
+
+.list-no-point {
+    list-style-type: none;
+}
+
+.d-item:hover {
+    transform: scale(1.1);
+    border: 2px solid var(--d-green) !important;
+}
+
+.d-input-box {
+    background: var(--grey-light);
+    color: var(--dark);
+    border-radius: 0.3rem;
+    border: none;
+    padding: 1rem;
+    resize: none;
+    max-height: 500px;
+}
+
+.styled-select select {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+}
+
+.br-1 {
+    border-radius: 0.3rem;
+}
+
+.br-2 {
+    border-radius: 0.6rem;
+}
+
+.br-3 {
+    border-radius: 0.9rem;
+}
+
+.br-4 {
+    border-radius: 1.2rem;
+}
+
+.br-5 {
+    border-radius: 1.5rem;
+}
+
+.br-6 {
+    border-radius: 2rem;
+}
+
+.br-7 {
+    border-radius: 3rem;
+}
+
+.border-green {
+    border: 1px solid var(--d-green) !important;
+}
+
+.border-green-bottom {
+    border-bottom: 3px solid var(--d-green) !important;
+}
+
+.square {
+    position: relative;
+    width: auto;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.content-square {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.no-pointer {
+    cursor: default !important;
+}
+
+.custom-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 5px;
+    margin-right: -5px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: var(--grey);
+    border-radius: 10px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.no-scrollbar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@keyframes vue-simple-spinner-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.w-content {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-content {
+        width: 85%;
+    }
+}
